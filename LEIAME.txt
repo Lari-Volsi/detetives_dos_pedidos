@@ -1,0 +1,10 @@
+Detetives dos Pedidos
+Missão Laboratório Seguro · Aula 3 · 3º ano EF
+BNCC EF03CO09 · SAEB 5L-AN2
+
+Como usar:
+Abra o arquivo index.html em qualquer navegador (Chrome, Edge, Firefox ou Safari).
+Funciona sem internet: todo o CSS, o JavaScript e as ilustrações estão dentro do próprio arquivo.
+Não há cadastro, login nem coleta de dados.
+
+Para publicar em outra plataforma, basta enviar o index.html.
