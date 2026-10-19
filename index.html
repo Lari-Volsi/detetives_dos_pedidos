@@ -44,7 +44,8 @@ h1,h2,h3{text-wrap:balance}
 button{font:inherit}
 
 /* Barra superior */
-.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:16px;margin-bottom:24px;border-bottom:2px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:16px;padding-block:16px;margin-bottom:20px}
+.brand-icon{width:34px;height:34px;flex:none}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem}
 .brand svg{width:34px;height:34px;flex:none}
 .progress{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
@@ -61,11 +62,13 @@ button{font:inherit}
 .btn svg{width:24px;height:24px;flex:none}
 
 /* Tela inicial */
-.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center;padding-block:12px}
-.intro h1{font-size:clamp(2.3rem,5.4vw,3.6rem);line-height:1.05;margin:6px 0 16px;font-weight:900;letter-spacing:-.01em}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center;padding-block:56px 24px}
+.intro-text{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.btn-big{min-height:66px;padding:14px 40px;font-size:1.35rem}
+.intro h1{font-size:clamp(2.6rem,6vw,4rem);line-height:1.05;margin:0;font-weight:900;letter-spacing:-.01em}
 .intro h1 span{color:var(--purple)}
 .eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
-.lead{font-size:1.18rem;max-width:34ch;margin:0 0 20px}
+.lead{font-size:1.4rem;font-weight:700;max-width:26ch;margin:0}
 .qs{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:520px}
 .qs li{display:flex;align-items:center;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:10px 12px;font-weight:700;font-size:1rem}
 .qs .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900}
@@ -82,7 +85,7 @@ button{font:inherit}
 .scene{display:block;width:100%;max-width:440px;height:auto;margin:0 auto}
 .scene text{font-family:var(--font)}
 .situation{display:flex;flex-direction:column;gap:10px}
-.situation p{margin:0;font-size:1.08rem}
+.situation p{margin:0;font-size:1.2rem;font-weight:600}
 .situation .quote{background:var(--yellow-tint);border:2px dashed var(--yellow-deep);border-radius:14px;padding:10px 14px;font-weight:800}
 .clues-title{margin:0;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
 .clues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;margin:0;padding:0}
@@ -99,10 +102,10 @@ button{font:inherit}
 .pip{width:12px;height:12px;border-radius:50%;background:var(--line)}
 .pip.on{background:var(--purple)}
 .pip.ok{background:var(--green)}
-.q-title{margin:14px 0 4px;font-size:1.65rem;line-height:1.2;font-weight:800}
+.q-title{margin:14px 0 20px;font-size:1.75rem;line-height:1.2;font-weight:800}
 .q-help{margin:0 0 18px;color:var(--ink-soft);font-size:1rem}
 .opts{display:flex;flex-direction:column;gap:12px}
-.opt{width:100%;min-height:66px;display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);color:var(--ink);border:2.5px solid var(--line);border-radius:18px;padding:12px 16px;font-size:1.08rem;font-weight:600;line-height:1.35;cursor:pointer;touch-action:manipulation}
+.opt{width:100%;min-height:66px;display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);color:var(--ink);border:2.5px solid var(--line);border-radius:18px;padding:12px 16px;font-size:1.2rem;font-weight:700;line-height:1.35;cursor:pointer;touch-action:manipulation}
 .opt:hover:not(:disabled):not([aria-disabled="true"]){border-color:var(--purple);background:var(--purple-tint)}
 .opt-key{flex:none;width:38px;height:38px;border-radius:50%;background:var(--purple-tint);color:var(--purple);display:grid;place-items:center;font-weight:900}
 .opt-text{flex:1;min-width:0}
@@ -121,7 +124,7 @@ button{font:inherit}
 .feedback.hint{background:var(--yellow-tint);border:2px solid var(--yellow-deep)}
 .fb-icon{flex:none;width:40px;height:40px}
 .fb-title{display:block;font-weight:900;font-size:1.08rem}
-.fb-body{margin:0;font-size:1.05rem}
+.fb-body{margin:0;font-size:1.15rem;font-weight:700;align-self:center}
 .actions{display:flex;justify-content:flex-end;margin-top:18px}
 
 /* Conclusão da missão */
@@ -134,9 +137,9 @@ button{font:inherit}
 .chain li.key .dot{background:var(--green);color:#FFFFFF}
 .chain .lbl{display:block;font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
 .chain .val{font-weight:700}
-.lesson{margin-top:8px;background:var(--yellow-tint);border:2px solid var(--yellow-deep);border-radius:18px;padding:14px 16px}
+.lesson{margin-top:20px;background:var(--yellow-tint);border:2px solid var(--yellow-deep);border-radius:18px;padding:14px 16px}
 .lesson .lbl{display:block;font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
-.lesson p{margin:4px 0 0;font-size:1.15rem;font-weight:800}
+.lesson p{margin:0;font-size:1.45rem;line-height:1.3;font-weight:800}
 
 /* Tela final */
 .final{max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;padding-block:8px}
@@ -148,6 +151,8 @@ button{font:inherit}
 .three .n{width:34px;height:34px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900}
 .guide{width:100%;background:var(--ink);color:#FFFFFF;border-radius:20px;padding:16px 20px;font-size:1.25rem;font-weight:900;display:flex;align-items:center;justify-content:center;gap:12px}
 .guide svg{width:34px;height:34px;flex:none}
+.remember{width:100%;display:flex;flex-direction:column;gap:6px}
+.remember h2{margin:0;font-size:1.2rem;font-weight:800}
 .recap{width:100%;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px 18px}
 .recap h2{margin:0 0 8px;font-size:1.05rem;font-weight:800}
 .recap ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
@@ -161,11 +166,12 @@ button{font:inherit}
 }
 @media (max-width:560px){
   body{font-size:17px}
-  .qs{grid-template-columns:minmax(0,1fr)}
+  .intro{padding-block:24px}
+  .intro-text{align-items:stretch;text-align:center}
+  .intro .lead{margin:0 auto}
   .three{grid-template-columns:minmax(0,1fr)}
   .case,.quest{padding:16px;border-radius:22px}
   .q-title{font-size:1.4rem}
-  .recap li{flex-direction:column;gap:0}
   .opt-tag{white-space:normal}
 }
 @media (prefers-reduced-motion: no-preference){
@@ -178,35 +184,24 @@ button{font:inherit}
 <body>
 
 <div class="wrap">
-  <header class="topbar">
-    <div class="brand">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="11" fill="#FFF4D1" stroke="#1C2551" stroke-width="4"/><path d="M25 25l9 9" stroke="#1C2551" stroke-width="5" stroke-linecap="round"/></svg>
-      <span>Detetives dos Pedidos</span>
-    </div>
-    <nav class="progress" id="progress" aria-label="Progresso da investigação" hidden>
+  <header class="topbar" id="topbar" hidden>
+    <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="11" fill="#FFF4D1" stroke="#1C2551" stroke-width="4"/><path d="M25 25l9 9" stroke="#1C2551" stroke-width="5" stroke-linecap="round"/></svg>
+    <nav class="progress" aria-label="Progresso">
       <ol class="mdots" id="mdots"></ol>
-      <span class="ptext" id="ptext"></span>
+      <span class="sr-only" id="ptext"></span>
     </nav>
   </header>
 
   <main>
     <!-- Tela inicial -->
     <section id="screen-intro" class="intro" aria-labelledby="introTitle">
-      <div>
-        <div class="eyebrow">Missão Laboratório Seguro · Aula 3</div>
+      <div class="intro-text">
         <h1 id="introTitle">Detetives <span>dos Pedidos</span></h1>
-        <p class="lead">Cody e Pixy encontraram quatro pedidos no mundo digital. Antes de decidir o que fazer, eles precisam da sua ajuda para investigar as pistas.</p>
-        <ul class="qs" aria-label="Em cada missão, você vai descobrir">
-          <li><span class="n">1</span>Quem está pedindo?</li>
-          <li><span class="n">2</span>Por que está pedindo?</li>
-          <li><span class="n">3</span>O que pode acontecer?</li>
-          <li><span class="n">4</span>O que devemos fazer?</li>
-        </ul>
-        <button class="btn" id="startBtn" type="button">
-          Começar investigação
+        <p class="lead">Ajude Cody e Pixy a investigar pedidos na internet!</p>
+        <button class="btn btn-big" id="startBtn" type="button">
+          Começar
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <p class="foot">BNCC EF03CO09 · SAEB 5L-AN2 · Nenhuma informação é pedida ou guardada nesta atividade.</p>
       </div>
       <div id="introArt"></div>
     </section>
@@ -362,148 +357,114 @@ button{font:inherit}
   var MISSIONS = [
     {
       title:'O desenho da turma', hero:'cody', scene:'desenho',
-      situation:[
-        {t:'p', text:'Em um site indicado pela professora, Cody terminou um desenho.'},
-        {t:'p', text:'Para salvar, o site pede que Cody escolha um apelido inventado.'}
-      ],
+      situation:'A professora indicou um site. Cody precisa inventar um apelido para salvar seu desenho.',
       steps:[
         { q:'Quem está pedindo?', options:[
-          {text:'O site que a professora indicou para a atividade', ok:true, clue:'O site da atividade',
-           fb:'Isso! Quem pede o apelido é o site da atividade. Saber quem pede é o primeiro passo da investigação.'},
-          {text:'Um colega da turma', fb:'Olhe a tela de novo. O pedido aparece no site, não vem de um colega.'},
-          {text:'Uma mensagem de prêmio que apareceu do nada', fb:'Releia a situação: Cody está em um site que a professora indicou. Tem algum prêmio na tela?'}
+          {text:'O site da atividade', ok:true, fb:'Isso! O pedido vem do site que a professora indicou.'},
+          {text:'Um colega da turma', fb:'Olhe a tela: o pedido aparece no site.'},
+          {text:'Uma mensagem de prêmio', fb:'Tem algum prêmio na tela? Olhe de novo.'}
         ]},
         { q:'Por que está pedindo?', options:[
-          {text:'Para descobrir onde Cody mora', fb:'O site pediu um endereço? Leia o que está escrito na tela.'},
-          {text:'Para identificar e salvar o desenho', ok:true, clue:'Salvar o desenho',
-           fb:'Boa investigação! O motivo está claro: o site precisa de um nome para guardar o desenho.'},
-          {text:'Não dá para saber, o site não explicou', fb:'Leia a tela com atenção. O site diz para que serve o apelido.'}
+          {text:'Para saber onde Cody mora', fb:'O site pediu endereço? Leia a tela de novo.'},
+          {text:'Para salvar o desenho', ok:true, fb:'Isso! O apelido serve para guardar o desenho.'},
+          {text:'Não sabemos o motivo', fb:'Olhe a tela: o site diz para que serve o apelido.'}
         ]},
-        { q:'Se Cody salvar o desenho com um apelido inventado, o que pode acontecer?', options:[
-          {text:'Todo mundo vai descobrir o nome verdadeiro e o endereço de Cody', fb:'Pense bem: um apelido inventado mostra o nome verdadeiro ou o endereço de alguém?'},
-          {text:'O desenho vai desaparecer do site', fb:'O apelido serve justamente para salvar o desenho. Depois de salvo, onde o apelido aparece?'},
-          {text:'O apelido pode aparecer junto ao desenho, sem mostrar quem Cody é de verdade', ok:true, clue:'O apelido aparece no desenho',
-           fb:'Isso! O apelido identifica o desenho e protege o nome verdadeiro de Cody.'}
+        { q:'Se Cody salvar, o que pode acontecer?', options:[
+          {text:'Todos vão saber o nome verdadeiro de Cody', fb:'Um apelido inventado mostra o nome verdadeiro?'},
+          {text:'O desenho vai sumir', fb:'O apelido serve para salvar. Onde ele vai aparecer?'},
+          {text:'O apelido aparece no desenho, sem mostrar o nome de Cody', ok:true, fb:'Isso! O apelido aparece, e o nome verdadeiro fica protegido.'}
         ]},
         { q:'O que Cody deve fazer?', options:[
-          {text:'Inventar um apelido e continuar a atividade como a professora orientou', ok:true, clue:'Usar um apelido inventado e seguir a orientação',
-           fb:'Ótima decisão! O pedido tem um motivo claro, e o apelido inventado não revela dados pessoais.'},
-          {text:'Escrever o nome completo, para todos saberem quem desenhou', fb:'O site pediu um apelido inventado. Precisamos mesmo informar o nome completo?'},
-          {text:'Parar tudo, porque nunca podemos escrever nada em um site', fb:'Nem todo pedido tem o mesmo risco. Aqui o motivo é claro e a professora está orientando a atividade.'}
+          {text:'Inventar um apelido e continuar a atividade', ok:true, fb:'Isso! O motivo é claro, e o apelido protege o nome de Cody.'},
+          {text:'Escrever o nome completo', fb:'O site pediu um apelido. Precisa mesmo do nome completo?'},
+          {text:'Parar tudo: nunca escrever nada em sites', fb:'Aqui o motivo é claro. Nem todo pedido tem o mesmo risco.'}
         ]}
       ],
-      lesson:'Nem todo pedido representa o mesmo risco. Precisamos entender para que ele serve e evitar informar dados pessoais sem necessidade.',
-      recap:'Usou um apelido inventado e seguiu a orientação.'
+      lesson:'Um apelido inventado ajuda a proteger sua identidade.'
     },
     {
       title:'O prêmio surpresa', hero:'pixy', scene:'premio',
-      situation:[
-        {t:'p', text:'Pixy está jogando. De repente, aparece uma mensagem na tela:'},
-        {t:'quote', text:'“GANHE MOEDAS GRÁTIS! Digite o telefone de alguém da sua família para receber o prêmio.”'}
-      ],
+      situation:'Uma mensagem no jogo promete moedas pelo telefone de alguém da família de Pixy.',
       steps:[
         { q:'Quem está pedindo?', options:[
-          {text:'A professora de Pixy', fb:'A professora aparece nesta situação? Veja de onde veio o pedido.'},
-          {text:'Alguém da família de Pixy', fb:'A mensagem pede o telefone de alguém da família, mas não foi a família que pediu. Olhe a tela.'},
-          {text:'Uma mensagem que apareceu no meio do jogo', ok:true, clue:'Uma mensagem no jogo',
-           fb:'Isso! Quem pede é uma mensagem que surgiu na tela. Nem sabemos quem escreveu.'}
+          {text:'A professora de Pixy', fb:'A professora aparece aqui? Veja de onde veio o pedido.'},
+          {text:'A família de Pixy', fb:'A família não pediu nada. Olhe a tela de novo.'},
+          {text:'Uma mensagem no jogo', ok:true, fb:'Isso! A mensagem apareceu, e nem sabemos quem escreveu.'}
         ]},
         { q:'Por que está pedindo?', options:[
-          {text:'Promete um prêmio, mas não explica por que precisa do telefone', ok:true, clue:'Promete prêmio, sem explicar',
-           fb:'Boa investigação! Um prêmio não explica nada. Para que um jogo precisaria do telefone da família?'},
-          {text:'Porque o jogo só funciona com um telefone', fb:'Pixy já estava jogando antes da mensagem aparecer. O jogo precisava do telefone para funcionar?'},
-          {text:'Para avisar a família quando Pixy ganhar', fb:'A mensagem disse isso? Leia de novo: ela só promete moedas.'}
+          {text:'Não explica para que quer o telefone', ok:true, fb:'Isso! Um prêmio não explica para que serve o telefone.'},
+          {text:'O jogo só funciona com telefone', fb:'Pixy já jogava antes. O jogo precisava do telefone?'},
+          {text:'Para avisar a família quando Pixy ganhar', fb:'A mensagem disse isso? Ela só promete moedas.'}
         ]},
         { q:'Se Pixy digitar o telefone, o que pode acontecer?', options:[
-          {text:'Pixy ganha as moedas e nada mais acontece', fb:'Depois de digitado, para onde vai o número? Quem poderia usar esse número?'},
-          {text:'Quem criou a mensagem poderá usar o número para entrar em contato com a família', ok:true, clue:'Desconhecidos poderiam contatar a família',
-           fb:'Isso! O telefone é uma informação pessoal da família. Quem recebe o número pode ligar ou mandar mensagens.'},
-          {text:'O tablet vai desligar sozinho', fb:'Pense no número digitado. O que alguém pode fazer com um telefone?'}
+          {text:'Pixy ganha as moedas e pronto', fb:'Para onde vai o número? Quem pode usá-lo?'},
+          {text:'Quem criou a mensagem pode ligar para a família', ok:true, fb:'Isso! Com o número, desconhecidos podem ligar ou mandar mensagens.'},
+          {text:'O tablet vai desligar', fb:'Pense no número. O que alguém faz com um telefone?'}
         ]},
         { q:'O que Pixy deve fazer?', options:[
-          {text:'Digitar o telefone rapidinho, para não perder o prêmio', fb:'A pressa ajuda a pensar? Lembre o que pode acontecer com o número.'},
-          {text:'Pedir o telefone a um adulto para ganhar o prêmio', fb:'Chamar um adulto é bom, mas para quê? Pedir o número e digitar continua entregando a informação.'},
-          {text:'Não digitar o telefone e contar o que aconteceu a um adulto de confiança', ok:true, clue:'Não digitar e contar a um adulto',
-           fb:'Ótima decisão! Sem o número, ninguém desconhecido entra em contato com a família. E o adulto pode ajudar com a mensagem.'}
+          {text:'Digitar rápido para não perder o prêmio', fb:'A pressa ajuda a pensar? Lembre o que pode acontecer.'},
+          {text:'Pedir o telefone a um adulto e digitar', fb:'Assim o número seria entregue do mesmo jeito.'},
+          {text:'Não digitar e contar a um adulto', ok:true, fb:'Isso! O número fica protegido, e o adulto ajuda com a mensagem.'}
         ]}
       ],
-      lesson:'Uma promessa de prêmio não justifica entregar informações pessoais.',
-      recap:'Não digitou o telefone e contou a um adulto.'
+      lesson:'Prêmios não são motivo para informar dados pessoais.'
     },
     {
       title:'Uma permissão inesperada', hero:'cody', scene:'permissao',
-      situation:[
-        {t:'p', text:'Cody abre um aplicativo de quebra-cabeças. Antes de começar, aparece uma pergunta:'},
-        {t:'quote', text:'“Permitir acesso às fotos do tablet?”'},
-        {t:'p', text:'O aplicativo não explica por que precisa dessa autorização.'}
-      ],
+      situation:'Um aplicativo de quebra-cabeças pede para ver as fotos do tablet, mas não explica por quê.',
       steps:[
         { q:'Quem está pedindo?', options:[
-          {text:'Um amigo de Cody, por mensagem', fb:'Tem alguma conversa nesta tela? A pergunta apareceu quando Cody abriu um aplicativo.'},
-          {text:'O aplicativo de quebra-cabeças', ok:true, clue:'O aplicativo de quebra-cabeças',
-           fb:'Isso! A pergunta aparece quando Cody abre o aplicativo de quebra-cabeças.'},
-          {text:'A professora de Cody', fb:'A professora não aparece nesta situação. Quando a pergunta surgiu?'}
+          {text:'Um amigo de Cody', fb:'Tem alguma conversa na tela? O pedido veio ao abrir o app.'},
+          {text:'O aplicativo de quebra-cabeças', ok:true, fb:'Isso! O pedido aparece quando Cody abre o aplicativo.'},
+          {text:'A professora de Cody', fb:'A professora não aparece aqui. Quem mostrou a pergunta?'}
         ]},
         { q:'Por que está pedindo?', options:[
-          {text:'Para tirar fotos novas da turma', fb:'A pergunta fala em acessar as fotos que já estão guardadas no tablet, não em tirar fotos.'},
-          {text:'Para montar o quebra-cabeça com as fotos de Cody', fb:'Releia a situação. O aplicativo disse para que quer as fotos? Ele já tem quebra-cabeças prontos.'},
-          {text:'Não sabemos: o aplicativo não explicou o motivo', ok:true, clue:'Não sabemos: sem explicação',
-           fb:'Boa investigação! Quando o motivo não é explicado, isso também é uma pista importante.'}
+          {text:'Para tirar fotos novas', fb:'O pedido é para ver fotos que já estão no tablet.'},
+          {text:'Para fazer quebra-cabeças com as fotos', fb:'O aplicativo disse isso? Ele já tem quebra-cabeças prontos.'},
+          {text:'Não sabemos o motivo', ok:true, fb:'Muito bem! Não sabemos por que o aplicativo quer ver as fotos.'}
         ]},
-        { q:'Se Cody tocar em “Permitir”, o que pode acontecer?', options:[
-          {text:'O aplicativo poderá ver as fotos pessoais guardadas no tablet', ok:true, clue:'O app poderia ver fotos pessoais',
-           fb:'Isso! Permitir o acesso abre as fotos para o aplicativo, até as fotos pessoais.'},
-          {text:'O quebra-cabeça vai ficar mais fácil', fb:'A permissão é sobre as fotos. O que o aplicativo poderia ver?'},
-          {text:'Nada, porque fotos não são informações pessoais', fb:'Nas fotos podem aparecer rostos, a casa, a família. Isso é pessoal?'}
+        { q:'Se Cody permitir, o que pode acontecer?', options:[
+          {text:'O aplicativo vai poder ver as fotos do tablet', ok:true, fb:'Isso! Até as fotos pessoais ficam abertas para o aplicativo.'},
+          {text:'O quebra-cabeça fica mais fácil', fb:'A permissão é sobre fotos. O que o app poderia ver?'},
+          {text:'Nada, fotos não são pessoais', fb:'Fotos mostram rostos, a casa, a família. Isso é pessoal?'}
         ]},
         { q:'O que Cody deve fazer?', options:[
-          {text:'Tocar em “Permitir”, porque é só um jogo de quebra-cabeças', fb:'Para montar um quebra-cabeça, será que precisamos mostrar nossas fotos pessoais?'},
-          {text:'Não permitir agora e pedir ajuda a um adulto de confiança', ok:true, clue:'Não permitir agora e pedir ajuda',
-           fb:'Boa investigação! O aplicativo não explicou por que precisa das fotos. É melhor pedir ajuda antes de permitir.'},
-          {text:'Permitir agora e contar a um adulto depois', fb:'Depois de permitir, o aplicativo já pode ver as fotos. O adulto ajuda mais se for chamado antes da decisão.'}
+          {text:'Permitir, porque é só um jogo', fb:'Para montar quebra-cabeça, precisamos mostrar nossas fotos?'},
+          {text:'Não permitir agora e pedir ajuda', ok:true, fb:'Isso! O motivo não foi explicado. Peça ajuda antes de permitir.'},
+          {text:'Permitir e contar a um adulto depois', fb:'Depois de permitir, o app já pode ver as fotos.'}
         ]}
       ],
-      lesson:'Antes de permitir o acesso a informações ou recursos do dispositivo, precisamos compreender para que serão utilizados.',
-      recap:'Não permitiu o acesso e pediu ajuda.'
+      lesson:'Na dúvida, peça ajuda antes de permitir o acesso.'
     },
     {
       title:'O placar do jogo', hero:'pixy', scene:'placar',
-      situation:[
-        {t:'p', text:'Pixy terminou uma partida e quer publicar uma captura de tela do placar no mural público do jogo.'},
-        {t:'p', text:'Porém, o nome completo de um colega aparece na imagem.'}
-      ],
+      situation:'Pixy quer publicar o placar em um mural público, mas a imagem mostra o nome completo de um colega.',
       steps:[
         { q:'Quem quer compartilhar?', options:[
-          {text:'O colega que aparece no placar', fb:'O colega só aparece na imagem. Quem teve a ideia de publicar?'},
-          {text:'Uma mensagem do jogo', fb:'Desta vez, o jogo não pediu nada. Releia a situação: quem quer publicar?'},
-          {text:'Pixy, que terminou a partida', ok:true, clue:'Pixy',
-           fb:'Isso! Desta vez, ninguém está pedindo algo. É Pixy quem quer compartilhar.'}
+          {text:'O colega do placar', fb:'O colega só aparece na imagem. Quem quer publicar?'},
+          {text:'Uma mensagem do jogo', fb:'Desta vez, ninguém pediu nada. Quem quer publicar?'},
+          {text:'Pixy', ok:true, fb:'Isso! Desta vez, é Pixy quem quer compartilhar.'}
         ]},
-        { q:'Por que Pixy quer compartilhar?', options:[
-          {text:'Para mostrar o resultado da partida', ok:true, clue:'Mostrar o resultado',
-           fb:'Boa! Pixy quer mostrar o placar. É um motivo compreensível, mas a investigação continua.'},
-          {text:'Para mostrar o nome do colega para todo mundo', fb:'O que Pixy quer mostrar? O nome está na imagem, mas não é o motivo de Pixy.'},
-          {text:'Não dá para saber o motivo', fb:'Releia a situação. Ela conta o que Pixy quer mostrar.'}
+        { q:'Por que quer compartilhar?', options:[
+          {text:'Para mostrar o resultado', ok:true, fb:'Isso! O motivo é bom, mas a investigação continua.'},
+          {text:'Para mostrar o nome do colega', fb:'O nome está na imagem, mas Pixy quer mostrar outra coisa.'},
+          {text:'Não sabemos o motivo', fb:'Pense: o que Pixy quer mostrar da partida?'}
         ]},
-        { q:'Se Pixy publicar essa imagem, o que pode acontecer?', options:[
-          {text:'Só Pixy vai conseguir ver a imagem', fb:'O mural é público. Quem pode ver o que está lá?'},
-          {text:'O placar vai mudar de resultado', fb:'Publicar não muda o placar. Mas quem vai ver o que está na imagem?'},
-          {text:'Quem visitar o mural poderá ver o nome completo do colega', ok:true, clue:'O nome do colega ficaria público',
-           fb:'Isso! O mural é público. O nome completo do colega ficaria à vista de muitas pessoas.'}
+        { q:'Se Pixy publicar, o que pode acontecer?', options:[
+          {text:'Só Pixy vai ver a imagem', fb:'O mural é público. Quem pode ver?'},
+          {text:'O placar vai mudar', fb:'Publicar não muda o placar. Quem vai ver a imagem?'},
+          {text:'Muita gente vai ver o nome do colega', ok:true, fb:'Isso! No mural público, todos podem ver o nome completo do colega.'}
         ]},
         { q:'O que Pixy deve fazer?', options:[
-          {text:'Publicar do jeito que está, porque o placar ficou ótimo', fb:'O placar é de Pixy, mas o nome é do colega. Ele concordou em aparecer no mural?'},
-          {text:'Não publicar assim e pedir orientação a um adulto antes de compartilhar', ok:true, clue:'Não publicar assim e pedir orientação',
-           fb:'Ótima decisão! O nome do colega também é uma informação pessoal. Com orientação, Pixy pode pensar em outro jeito de mostrar o resultado.'},
-          {text:'Publicar e avisar o colega depois', fb:'Depois de publicada, a imagem já pode ser vista por muitas pessoas. É melhor pensar antes.'}
+          {text:'Publicar assim mesmo', fb:'Olhe a pista: o nome do colega aparece na imagem!'},
+          {text:'Não publicar assim e pedir orientação', ok:true, fb:'Isso! Com ajuda, Pixy pode mostrar o placar sem o nome.'},
+          {text:'Publicar e avisar o colega depois', fb:'Depois de publicada, muita gente já pode ver a imagem.'}
         ]}
       ],
-      lesson:'Devemos proteger nossas informações pessoais e também respeitar a privacidade das outras pessoas.',
-      recap:'Não publicou a imagem assim e pediu orientação.'
+      lesson:'As informações dos colegas também precisam de proteção.'
     }
   ];
 
-  var CLUE_LABELS = ['Quem', 'Por quê', 'O que pode acontecer', 'Atitude'];
   var KEYS = ['A','B','C'];
 
   /* ---------- Estado ---------- */
@@ -526,8 +487,7 @@ button{font:inherit}
   }
 
   function renderProgress(name){
-    var nav = $('progress');
-    nav.hidden = (name === 'intro');
+    $('topbar').hidden = (name === 'intro');
     var html = '';
     for (var i=0;i<4;i++){
       var cls = 'mdot' + (st.done[i] ? ' done' : '') + (name==='mission' && i===st.m && !st.done[i] ? ' current' : '');
@@ -536,7 +496,7 @@ button{font:inherit}
     }
     $('mdots').innerHTML = html;
     var t = '';
-    if (name === 'mission') t = st.done[st.m] ? 'Missão '+(st.m+1)+' de 4 · Caso resolvido' : 'Missão '+(st.m+1)+' de 4 · Etapa '+(st.s+1)+' de 4';
+    if (name === 'mission') t = 'Missão '+(st.m+1)+' de 4';
     else if (name === 'final') t = 'Todas as missões concluídas';
     $('ptext').textContent = t;
   }
@@ -549,19 +509,11 @@ button{font:inherit}
       var order = shuffle([0,1,2]);
       return order;
     });
-    var sit = M.situation.map(function(x){
-      return '<p'+(x.t==='quote'?' class="quote"':'')+'>'+esc(x.text)+'</p>';
-    }).join('');
-    var clues = CLUE_LABELS.map(function(l,k){
-      return '<li class="clue" id="clue-'+k+'"><span class="lbl">'+l+'</span><span class="val">?</span></li>';
-    }).join('');
     casePanel.innerHTML =
       '<div class="case-head">'+avatar(M.hero)+
-        '<div><div class="eyebrow">Missão '+(i+1)+' de 4</div><h2 class="case-title" id="caseTitle">'+esc(M.title)+'</h2></div></div>'+
+        '<div><div class="eyebrow">Missão '+(i+1)+'</div><h2 class="case-title" id="caseTitle">'+esc(M.title)+'</h2></div></div>'+
       SCENES[M.scene]+
-      '<div class="situation">'+sit+'</div>'+
-      '<div><h3 class="clues-title" id="cluesTitle">Pistas encontradas</h3>'+
-      '<ul class="clues" aria-labelledby="cluesTitle" style="margin-top:8px">'+clues+'</ul></div>';
+      '<div class="situation"><p>'+esc(M.situation)+'</p></div>';
     casePanel.setAttribute('aria-labelledby','caseTitle');
     show('mission');
     renderStep(false);
@@ -581,12 +533,11 @@ button{font:inherit}
       return '<button type="button" class="opt" id="opt-'+st.s+'-'+k+'" data-o="'+oi+'">'+
         '<span class="opt-key" aria-hidden="true">'+KEYS[k]+'</span>'+
         '<span class="opt-text">'+esc(step.options[oi].text)+'</span>'+
-        '<span class="opt-tag"></span></button>';
+        '<span class="opt-tag sr-only"></span></button>';
     }).join('');
     questPanel.innerHTML =
-      '<div class="q-meta"><span class="pill">Etapa '+(st.s+1)+' de 4</span>'+pipsHtml()+'</div>'+
+      '<div class="q-meta">'+pipsHtml()+'<span class="sr-only">Pergunta '+(st.s+1)+' de 4</span></div>'+
       '<h2 class="q-title" id="qTitle" tabindex="-1">'+esc(step.q)+'</h2>'+
-      '<p class="q-help">Observe as pistas da situação e escolha uma resposta.</p>'+
       '<div class="opts" role="group" aria-labelledby="qTitle">'+opts+'</div>'+
       '<div class="feedback" id="fb" role="status" aria-live="polite"></div>'+
       '<div class="actions"><button type="button" class="btn" id="nextBtn" hidden></button></div>';
@@ -617,16 +568,13 @@ button{font:inherit}
       st.solved = true;
       btn.classList.add('correct');
       btn.querySelector('.opt-key').textContent = '✓';
-      btn.querySelector('.opt-tag').textContent = '✓ Isso!';
+      btn.querySelector('.opt-tag').textContent = '(resposta certa)';
       btn.setAttribute('aria-describedby','fb');
       Array.prototype.forEach.call(questPanel.querySelectorAll('.opt'), function(b){ b.disabled = true; });
       fb.className = 'feedback ok';
-      fb.innerHTML = ICON_OK + '<div><span class="fb-title">Boa investigação!</span><p class="fb-body">'+esc(opt.fb)+'</p></div>';
-      var c = $('clue-'+st.s);
-      c.classList.add('found');
-      c.querySelector('.val').textContent = opt.clue;
+      fb.innerHTML = ICON_OK + '<p class="fb-body">'+esc(opt.fb)+'</p>';
       var next = $('nextBtn');
-      next.innerHTML = (st.s < 3 ? 'Próxima pergunta' : 'Ver conclusão do caso') +
+      next.innerHTML = 'Continuar' +
         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       next.hidden = false;
       next.focus({preventScroll:true});
@@ -635,28 +583,22 @@ button{font:inherit}
       st.tried[oi] = true;
       btn.classList.add('tried');
       btn.setAttribute('aria-disabled','true');
-      btn.querySelector('.opt-tag').textContent = '✗ Ainda não';
+      btn.querySelector('.opt-key').textContent = '✗';
+      btn.querySelector('.opt-tag').textContent = '(ainda não)';
       fb.className = 'feedback hint';
-      fb.innerHTML = ICON_HINT + '<div><span class="fb-title">Observe uma pista</span><p class="fb-body">'+esc(opt.fb)+' Tente de novo!</p></div>';
+      fb.innerHTML = ICON_HINT + '<p class="fb-body">'+esc(opt.fb)+'</p>';
     }
   }
 
   function renderConclusion(){
     var M = MISSIONS[st.m];
     st.done[st.m] = true;
-    var items = M.steps.map(function(step, k){
-      var o = step.options[correctIndex(step)];
-      return '<li'+(k===3?' class="key"':'')+'><span class="dot" aria-hidden="true">'+(k+1)+'</span><div><span class="lbl">'+CLUE_LABELS[k]+'</span><span class="val">'+esc(o.clue)+'</span></div></li>';
-    }).join('');
     var last = st.m === 3;
     questPanel.innerHTML =
-      '<span class="stamp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Caso resolvido</span>'+
-      '<h2 class="q-title" id="qTitle" tabindex="-1">O que a investigação mostrou</h2>'+
-      '<p class="q-help">Veja como as pistas se ligam: o que pode acontecer ajuda a escolher a atitude.</p>'+
-      '<ol class="chain">'+items+'</ol>'+
-      '<div class="lesson"><span class="lbl">Conclusão</span><p>'+esc(M.lesson)+'</p></div>'+
+      '<span class="stamp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Caso resolvido!</span>'+
+      '<div class="lesson"><p id="qTitle" tabindex="-1">'+esc(M.lesson)+'</p></div>'+
       '<div class="actions"><button type="button" class="btn" id="nextMissionBtn">'+
-        (last ? 'Concluir investigação' : 'Próxima missão')+
+        (last ? 'Terminar' : 'Próxima missão')+
         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>';
     renderProgress('mission');
     $('qTitle').focus({preventScroll:true});
@@ -665,7 +607,6 @@ button{font:inherit}
 
   /* ---------- Tela final ---------- */
   function renderFinal(){
-    var recap = MISSIONS.map(function(M){ return '<li><b>'+esc(M.title)+'</b><span>'+esc(M.recap)+'</span></li>'; }).join('');
     screens.final.innerHTML =
       '<svg class="badge" viewBox="0 0 200 210" role="img" aria-label="Distintivo de Detetive Digital">'+
         '<path d="M60 150 L44 204 L72 190 L88 210 L100 158Z" fill="#5B3FD0"/><path d="M140 150 L156 204 L128 190 L112 210 L100 158Z" fill="#4630AA"/>'+
@@ -673,19 +614,19 @@ button{font:inherit}
         '<circle cx="100" cy="92" r="64" fill="#5B3FD0"/>'+
         '<circle cx="92" cy="82" r="24" fill="#ECE8FD" stroke="#FFFFFF" stroke-width="8"/><path d="M110 100 L130 120" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>'+
         '<rect x="22" y="132" width="156" height="34" rx="10" fill="#1C2551"/>'+
-        '<text x="100" y="155" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5" font-family="inherit">DETETIVE DIGITAL</text>'+
+        '<text x="100" y="155" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing=".5" font-family="inherit">DETETIVE DIGITAL</text>'+
       '</svg>'+
-      '<h1 id="finalTitle" tabindex="-1">MISSÃO CUMPRIDA!</h1>'+
-      '<p class="lead">Você concluiu as investigações e ajudou Cody e Pixy a pensar antes de compartilhar!</p>'+
-      '<ol class="three" aria-label="As perguntas do detetive">'+
-        '<li><span class="n">1</span>Quem está pedindo?</li>'+
-        '<li><span class="n">2</span>Por que está pedindo?</li>'+
-        '<li><span class="n">3</span>O que pode acontecer?</li>'+
-      '</ol>'+
-      '<p class="guide"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFC83D"/><rect x="17.5" y="9" width="5" height="15" rx="2.5" fill="#1C2551"/><circle cx="20" cy="30" r="3" fill="#1C2551"/></svg>Na dúvida, pare e peça ajuda a um adulto de confiança!</p>'+
-      '<section class="recap" aria-labelledby="recapTitle"><h2 id="recapTitle">Cada caso pediu uma atitude diferente</h2><ul>'+recap+'</ul></section>'+
-      '<button type="button" class="btn" id="restartBtn">'+
-        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Investigar novamente</button>';
+      '<h1 id="finalTitle" tabindex="-1">Missão cumprida!</h1>'+
+      '<p class="lead">Você é um Detetive Digital!</p>'+
+      '<section class="remember" aria-labelledby="remTitle"><h2 id="remTitle">Lembre-se:</h2>'+
+      '<ol class="three">'+
+        '<li><span class="n" aria-hidden="true">1</span>Quem está pedindo?</li>'+
+        '<li><span class="n" aria-hidden="true">2</span>Por quê?</li>'+
+        '<li><span class="n" aria-hidden="true">3</span>O que pode acontecer?</li>'+
+      '</ol></section>'+
+      '<p class="guide"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFC83D"/><rect x="17.5" y="9" width="5" height="15" rx="2.5" fill="#1C2551"/><circle cx="20" cy="30" r="3" fill="#1C2551"/></svg>Na dúvida, peça ajuda!</p>'+
+      '<button type="button" class="btn btn-big" id="restartBtn">'+
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Jogar novamente</button>';
     show('final');
     $('finalTitle').focus({preventScroll:true});
   }
